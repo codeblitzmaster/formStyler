@@ -1,0 +1,32 @@
+.fs-ele-wrapper{
+	padding:5px;
+}
+
+.fs-ele-wrapper.fs-col-2{
+	width: 48%;
+	float:left;
+	display: inline-block;
+}
+
+.fs-ele-wrapper .fs-label{
+	display: inline-block;
+	width:150px;
+	white-space: pre-wrap; /* css-3 */    
+    white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+    white-space: -pre-wrap; /* Opera 4-6 */    
+    white-space: -o-pre-wrap; /* Opera 7 */    
+    word-wrap: break-word; /* Internet Explorer 5.5+ */
+}
+
+.fs-ele-wrapper .fs-label-block{
+	display: block;
+	width:150px;
+	white-space: pre-wrap; /* css-3 */    
+    white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+    white-space: -pre-wrap; /* Opera 4-6 */    
+    white-space: -o-pre-wrap; /* Opera 7 */    
+    word-wrap: break-word; /* Internet Explorer 5.5+ */
+}
+.fs-ele-wrapper input{
+	vertical-align: top;
+}
