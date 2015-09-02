@@ -26,10 +26,10 @@
 						base.fs_col_restructure();
 						break;
 				case 2:
-						base.fs_col_restructure('fs-col-2',false);
+						base.fs_col_restructure('fs-col-2');
 						break;
 				case 3: 
-						base.fs_col_restructure('fs-col-3',false);
+						base.fs_col_restructure('fs-col-3');
 						break;						
 				default:
 
