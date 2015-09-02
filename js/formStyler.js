@@ -6,7 +6,12 @@
 
 		var base = this;
 		var labelsCollection = base.find('label');
-		var fsWrapper  = base.find('.fs-ele-wrapper');;
+		var fsWrapper  = base.find('.fs-ele-wrapper');
+
+		var colClasses = [
+							'fs-col-2',
+							'fs-col-3'
+							];
 		base.init = function(){
 			console.log('Plugin Works');
 			console.log(settings);
@@ -18,11 +23,14 @@
 				});
 			switch(settings.columns){
 				case 1:
-						base.fs_col_1_structure();
+						base.fs_col_restructure();
 						break;
 				case 2:
-						base.fs_col_2_structure();
+						base.fs_col_restructure('fs-col-2',false);
 						break;
+				case 3: 
+						base.fs_col_restructure('fs-col-3',false);
+						break;						
 				default:
 
 			}
@@ -51,15 +59,16 @@
 				});
 			}
 		};
-		base.fs_col_1_structure = function(){
-				$.each(fsWrapper,function(i){
-					$(this).removeClass('fs-col-2');
-				});
-		};
-		base.fs_col_2_structure = function(){
-			// Adding Two Column Structure
+		// base.fs_col_restructure = function(){
+		// 		$.each(fsWrapper,function(i){
+		// 			$(this).removeClass('fs-col-2');
+		// 		});
+		// };
+		base.fs_col_restructure  = function(newFsClass){
+			base.remove_fs_col_class();
+			newFsClass = newFsClass || '';
 			$.each(fsWrapper,function(i){
-				$(this).addClass('fs-col-2');
+				$(this).addClass(newFsClass);
 			});
 		};
 
@@ -73,6 +82,14 @@
 			});
 			fsWrapper = base.find('.fs-ele-wrapper');
 		};
+
+		base.remove_fs_col_class = function(){
+				$.each(fsWrapper,function(i){
+					$(this).removeClass (function (index, css) {
+				    	return (css.match (/(^|\s)fs-col-\S+/g) || []).join(' ');
+					});
+				});
+			}
 
 		base.init();
     };

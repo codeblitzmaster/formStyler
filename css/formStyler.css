@@ -8,6 +8,12 @@
 	display: inline-block;
 }
 
+.fs-ele-wrapper.fs-col-3{
+	width: 32%;
+	float:left;
+	display: inline-block;
+}
+
 .fs-ele-wrapper .fs-label{
 	display: inline-block;
 	width:150px;
